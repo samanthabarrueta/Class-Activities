@@ -1,0 +1,31 @@
+#bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#large {
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+#lineheight {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+a {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: yellow;
+    font-size: 24px; 
+}

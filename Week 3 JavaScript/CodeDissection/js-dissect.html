@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Data Types, User Input, Conditional Logic
+    </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var userName = prompt("What's your name?");
+      var confirmDogs = confirm("Do you like dogs?");
+
+      var petName = "Zuri";
+      var petType = "dog";
+      var petAge = 14;
+      var petIsdog = false;
+
+      if (confirmDogs) {
+        alert('I have a ' + petType + ' named ' + petName + '. She is ' + petAge + ' years old.');
+      }
+      else {
+        alert("You don't get my dog's information");
+      }
+
+      if (petIsdog) {
+        alert("I love my dog");
+      }
+      else {
+        alert("JK. I wish I had a dog");
+      }
+
+      if (petAge === 1) {
+        alert("My pet is still a puppy");
+      }
+
+      else if (petAge < 1) {
+        alert("My pet is still a puppy");
+      }
+      else if (petAge > 1) {
+        alert("My pet is not a puppy anymore");
+      }
+
+      // document.write() overwrites the entire page. We don't normally use this, but we will today for simplicity
+      document.write("Welcome to our page " + userName);
+
+      var catAge = prompt("How old is your cat?");
+
+      // Won't work as expected
+      alert(catAge + 2);
+
+      // Works as expected
+      alert(parseInt(catAge) + 2);
+
+    </script>
+  </body>
+</html>
