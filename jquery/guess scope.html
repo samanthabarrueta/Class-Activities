@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope Activity #1</title>
+</head>
+<body>
+  <h1>Scope Activity #1</h1>
+  <h2>✨Open the console to see the magic!✨</h2>
+
+  <script>
+
+    function outside() {
+      // what is the scope of this variable? global 
+      var x = 1;
+
+      // what is the scope of this function and the scope of y? local 
+      function inside(y) {
+
+        console.log(x + y);
+      }
+
+      return inside; // walter white example.. parking ur meth lab in the desert and now you can use it. before you were drivng. had all the tools etc to use but could not use because you were drinving
+    }
+
+    // what is happening here? result of outside is being stored as the var insideout
+    // giving access to inside from outside
+    var insideOut = outside();
+    // var insideOut = function(y) {
+        // console.log('inside has been called');        
+        // console.log('y', y);
+        // console.log(x+y);
+        //}
+
+    // What does this return? 3
+    insideOut(2);
+
+    // Uncaught ReferenceError: x is not defined.
+    // How does insideOut have access to x? because its part of the global scope
+    console.log("The value of 'x' outside 'outside()' is: " + x);
+
+  </script>
+
+</body>
+</html>

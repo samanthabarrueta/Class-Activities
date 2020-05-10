@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>RPS Game</title>
+</head>
+  <body>
+    <script>
+    
+    userScore = 0
+    cpuScore = 0
+    tieGames = 0
+
+    for (var i = 0; i < 5; i++) {
+      var gameOpts = ['rock', 'paper', 'scissors'];
+      var gameScenarios = ['rock-rock', 'paper-paper', 'scissors-scissors', 'rock-scissors', 'paper-rock', 'scissors-paper', 'rock-paper', 'paper-scissors', 'scissors-rock']
+      var tieScenarios = ['rock-rock', 'paper-paper', 'scissors-scissors']
+      var userWins = ['rock-scissors', 'paper-rock', 'scissors-paper']
+      var cpuWins = ['rock-paper', 'paper-scissors', 'scissors-rock']
+      var userChoice = prompt('Pick one of the following: rock, paper, or scissors').toLowerCase();
+      var cpuChoice = gameOpts[Math.floor(Math.random() * gameOpts.length)];
+      var gameOutcome = userChoice + '-' + cpuChoice;
+
+      console.log('cpu chooses: ' + cpuChoice);
+
+        if (gameOpts.includes(userChoice)) {
+            if (userChoice === cpuChoice) {
+              tieGames++;
+              alert('Tie Game');        
+              console.log('user: ' + userScore + ', cpu: ' + cpuScore + ', ties: ' + tieGames);
+            } 
+            if (userWins.includes(gameOutcome) === true) {
+              userScore++;
+              alert('User Wins');
+              console.log('user: ' + userScore + ', cpu: ' + cpuScore + ', ties: ' + tieGames);        
+            }
+            if (cpuWins.includes(gameOutcome) === true) {
+              cpuScore++;
+              alert('Computer Wins');
+              console.log('user: ' + userScore + ', cpu: ' + cpuScore + ', ties: ' + tieGames);        
+            }
+        } 
+        else {
+          alert('PLEASE CHOOSE FROM THE OPTIONS:');
+        }  
+    }
+
+    console.log('GAME OVER');
+
+    if (userScore > cpuScore) {
+      console.log('USER WINS')
+    }
+    if (userScore < cpuScore) {
+      console.log('CPU WINS')
+    }
+    else {
+      console.log('TIE GAME')
+    }
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+  

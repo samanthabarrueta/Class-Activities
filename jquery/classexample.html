@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger Clicked</title>
+</head>
+<body>
+<h3 id="click-me">CLICK ME!</h3>
+<div id="message">
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var clickFunction = function() {
+        var rapper = prompt('what is your favorite rapper');
+        $('#message').html("<p>You answered: "+ rapper + "</p>");
+    }
+    $("#click-me").on("click", clickFunction); // in context
+});
+</script>
+</body>
+</html>

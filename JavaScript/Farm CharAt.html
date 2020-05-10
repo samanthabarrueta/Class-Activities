@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>zoo loop</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+ 
+
+    for (var i = 0; i < myFarm.length; i++) {
+        console.log(myFarm[i]);
+
+        if (myFarm[i].charAt(0) === "c" || myFarm[i].charAt(0) === "o") {
+          alert("Starts with a c or an o!");
+        }
+        else {
+          alert('Does not start with a c or an o!')
+        } 
+
+    }
+
+
+    </script>
+
+  </body>
+</html>
