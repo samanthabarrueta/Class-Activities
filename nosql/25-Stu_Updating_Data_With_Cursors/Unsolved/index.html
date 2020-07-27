@@ -40,6 +40,22 @@
         getAll.onsuccess = () => {
           console.log(getAll.result); 
         }; 
+
+        const getCursorRequest = toDoStore.openCursor();
+        getCursorRequest.onsuccess = e => {
+          const cursor = e.target.result;
+          if (cursor) {
+            if (cursor.value.item === "walk the dog") {
+              const todo = cursor.value;
+              todo.item = "complete";
+              todo.status="complete";
+              cursor.update(todo);
+            cursor.continue();
+            } else {
+              console.log("No documents left!");
+            };
+          };
+        };
       };
 
 
