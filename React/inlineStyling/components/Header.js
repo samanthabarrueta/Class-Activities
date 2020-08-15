@@ -3,7 +3,7 @@ import "../styles/Header.css";
 
 // By importing the Header.css file, it is added to the DOM whenever this component loads
 const divStyle = {
-  fontSize: 100,
+  fontSize: '100px',
   backgroundColor: 'red'  
 
 };
@@ -11,7 +11,7 @@ const divStyle = {
 function Header() {
   return (
     <header className="header" style={divStyle}>
-    <h1>Welcome</h1>
+    <h1 style={divStyle}>Welcome</h1>
   </header>
   );
 }

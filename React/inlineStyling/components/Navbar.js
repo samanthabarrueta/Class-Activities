@@ -4,6 +4,7 @@ import "../styles/Navbar.css";
 // By importing the Navbar.css file, it is added to the DOM whenever this component loads
 const divStyle = {
   justifyContent: "flex-end",
+  backgroundColor: "green",
   
 };
 
